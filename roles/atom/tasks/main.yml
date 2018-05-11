@@ -1,0 +1,7 @@
+---
+- name: install atom
+  homebrew_cask:
+    name: atom
+    state: present
+
+# @todo install apm packages

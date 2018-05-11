@@ -1,0 +1,7 @@
+---
+- name: install atom
+  homebrew:
+    name: php72
+    state: present
+
+# @todo add php configuration

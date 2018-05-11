@@ -1,0 +1,10 @@
+---
+- name: update and upgrade homebrew cask
+  homebrew:
+    upgrade_all: yes
+
+- name: install homebrew casks
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_casks }}"

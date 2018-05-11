@@ -1,0 +1,79 @@
+---
+
+- hosts: localhost
+  connection: local
+
+  roles:
+    #- osx
+    - homebrew
+    - homebrew-cask
+    - atom
+    - bash
+    - mysql
+    - php
+
+  vars:
+    osx_defaults:
+      -
+    homebrew_taps:
+      - homebrew/services
+      - caskroom/fonts
+    homebrew_formula:
+      - rsync
+      - trash
+      - hr
+      - mackup
+      - bash-completion
+      - git
+      - git-flow
+      - wget
+      - ansible
+      - composer
+      - phpunit
+      - php-code-sniffer
+    homebrew_casks:
+      - alfred
+      - google-chrome
+      - firefox
+      - airfile
+      - dropbox
+      - google-drive
+      - insync
+      - clamxav
+      - deeper
+      - omnidisksweeper
+      - onyx
+      - owncloud
+      - setapp
+      - superduper
+      - iterm2
+      - cheatsheet
+      - cleanmymac
+      - a-better-finder-attributes
+      - a-better-finder-rename
+      - bartender
+      - big-mean-folder-machine
+      - dash
+      - dropzone
+      - postbox
+      - flux
+      - skitch
+      - virtualbox
+      - transmit
+      - tower
+      - vagrant
+      - diffmerge
+      - sequel-pro
+      - font-source-code-pro
+      # Hackintosh
+      # - kext-utility
+      # - kext-wizard
+      # Media
+      # - adapter
+      # - all2mp3
+      # - id3-editor
+      # - vlc
+      # - filebot
+      # - handbrake
+      # - musicbrainz-picard
+      # - calibre

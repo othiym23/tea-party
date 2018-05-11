@@ -1,0 +1,7 @@
+---
+- name: install atom
+  homebrew:
+    name: mysql
+    state: present
+
+# @todo add mysql configuration

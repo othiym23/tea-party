@@ -1,0 +1,22 @@
+---
+- name: install homebrew via the curl oneliner
+  shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  args:
+    creates: /usr/local/bin/brew
+
+- name: update and upgrade homebrew
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- name: install homebrew taps
+  homebrew_tap:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_taps }}"
+
+- name: install homebrew formula
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_formula }}"
