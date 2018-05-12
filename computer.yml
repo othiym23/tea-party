@@ -4,13 +4,10 @@
   connection: local
 
   roles:
-    #- osx
     - homebrew
     - homebrew-cask
     - atom
-    - bash
-    - mysql
-    - php
+    # - rustup
 
   vars:
     osx_defaults:
@@ -19,61 +16,125 @@
       - homebrew/services
       - caskroom/fonts
     homebrew_formula:
+      - zsh
+      - zsh-completions
       - rsync
-      - trash
-      - hr
-      - mackup
-      - bash-completion
-      - git
-      - git-flow
-      - wget
       - ansible
-      - composer
-      - phpunit
-      - php-code-sniffer
+      - aspell
+      - awscli
+      - boost
+      - cabal-install
+      - camlp4
+      - camlp5
+      - clang-format
+      - cmake
+      - coreutils
+      - cscope
+      - ctags
+      - curl
+      - diffpdf
+      - dnstracer
+      - docker
+      - docker-clean
+      - docker-machine
+      - docker-machine-driver-xhyve
+      - erlang
+      - emacs
+      - emacs-plus
+      - exa
+      - findutils
+      - fsharppowerpack
+      - ghc
+      - gist
+      - git
+      - git-extras
+      - git-flow
+      - git-lfs
+      - git-utils
+      - gnu-sed
+      - gnu-typist
+      - go
+      - graphicsmagick
+      - haskell-stack
+      - httpie
+      - hub
+      - lua
+      - luajit
+      - macvim
+      - mas
+      - mercurial
+      - mlton
+      - mono
+      - multimarkdown
+      - mysql
+      - nethack
+      - ocaml
+      - ocamlbuild
+      - octave
+      - opam
+      - ounit
+      - pandoc
+      - par
+      - proctools
+      - pstree
+      - r
+      - rbenv
+      - rbenv-default-gems
+      - reattach-to-user-namespace
+      - redis
+      - repl
+      - ripgrep
+      - rlwrap
+      - ruby-build
+      - shellcheck
+      - siege
+      - slashem
+      - sloccount
+      - smlnj
+      - stgit
+      - stone-soup
+      - tmux
+      - tree
+      - typespeed
+      - unrar
+      - uptimed
+      - w3m
+      - wget
+      - wrk
+      - xar
+      - xhyve
+      - xz
     homebrew_casks:
-      - alfred
-      - google-chrome
-      - firefox
-      - airfile
-      - dropbox
-      - google-drive
-      - insync
-      - clamxav
-      - deeper
-      - omnidisksweeper
-      - onyx
-      - owncloud
-      - setapp
-      - superduper
-      - iterm2
-      - cheatsheet
-      - cleanmymac
-      - a-better-finder-attributes
-      - a-better-finder-rename
+      - "0xed"
       - bartender
-      - big-mean-folder-machine
+      - base
       - dash
-      - dropzone
-      - postbox
+      - dropbox
+      - firefox
+      - forklift
       - flux
-      - skitch
-      - virtualbox
-      - transmit
-      - tower
-      - vagrant
-      - diffmerge
-      - sequel-pro
       - font-source-code-pro
-      # Hackintosh
-      # - kext-utility
-      # - kext-wizard
-      # Media
-      # - adapter
-      # - all2mp3
-      # - id3-editor
-      # - vlc
-      # - filebot
-      # - handbrake
-      # - musicbrainz-picard
-      # - calibre
+      - google-chrome
+      - gpgtools
+      - grandperspective
+      - hexfiend
+      - iterm2
+      - java
+      - kap
+      - keybase
+      - launchbar
+      - mactex
+      - nimbus
+      - nvalt
+      - pgadmin4
+      - postgres
+      - steam
+      - superduper
+      - the-unarchiver
+      - tor-browser
+      - transmit
+      - virtualbox
+      - visual-studio-code
+      - vlc
+      - xquartz
+      - zoomus

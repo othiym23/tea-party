@@ -5,17 +5,17 @@ BRed='\e[1;31m'         # Red
 Color_Off='\e[0m'       # Text Reset
 
 function setStatusMessage {
-    printf "${IRed} --> ${BGreen}$1${Color_Off}\n" 1>&2
+    echo "${BRed} --> ${BGreen}$1${Color_Off}" 1>&2
 }
 
 function triggerError {
-    printf "${BRed} --> $1 ${Color_Off}\n" 1>&2
+    echo "${BRed} --> $1 ${Color_Off}" 1>&2
     exit 1
 }
 
 # Check whether a command exists - returns 0 if it does, 1 if it does not
 function exists {
-  if command -v $1 >/dev/null 2>&1
+  if command -v "$1" >/dev/null 2>&1
   then
     return 0
   else
@@ -49,9 +49,9 @@ function install_clt {
 
         TOOLS=clitools.dmg
         curl "$DMGURL" -o "$TOOLS"
-        TMPMOUNT=`/usr/bin/mktemp -d /tmp/clitools.XXXX`
+        TMPMOUNT="$(/usr/bin/mktemp -d /tmp/clitools.XXXX)"
         hdiutil attach "$TOOLS" -mountpoint "$TMPMOUNT"
-        installer $ALLOW_UNTRUSTED -pkg "$(find $TMPMOUNT -name '*.mpkg')" -target /
+        installer "$ALLOW_UNTRUSTED" -pkg "$(find "$TMPMOUNT" -name '*.mpkg')" -target /
         hdiutil detach "$TMPMOUNT"
         rm -rf "$TMPMOUNT"
         rm "$TOOLS"
@@ -59,9 +59,10 @@ function install_clt {
     fi
 }
 
-printf "${BGreen} ╔╦╗┌─┐┌─┐  ╔═╗┌─┐┬─┐┌┬┐┬ ┬ ${Color_Off}\n";
-printf "${BGreen}  ║ ├┤ ├─┤  ╠═╝├─┤├┬┘ │ └┬┘ ${Color_Off}\n";
-printf "${BGreen}  ╩ └─┘┴ ┴  ╩  ┴ ┴┴└─ ┴  ┴  ${Color_Off}\n\n";
+echo "${BGreen} ╔╦╗┌─┐┌─┐  ╔═╗┌─┐┬─┐┌┬┐┬ ┬ ${Color_Off}"
+echo "${BGreen}  ║ ├┤ ├─┤  ╠═╝├─┤├┬┘ │ └┬┘ ${Color_Off}"
+echo "${BGreen}  ╩ └─┘┴ ┴  ╩  ┴ ┴┴└─ ┴  ┴  ${Color_Off}"
+echo
 
 setStatusMessage "Checking if we need to ask for a sudo password"
 
