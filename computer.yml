@@ -109,7 +109,9 @@
       - bartender
       - base
       - dash
+      - default-folder-x
       - dropbox
+      - fantastical
       - firefox
       - forklift
       - flux
@@ -128,6 +130,9 @@
       - nvalt
       - pgadmin4
       - postgres
+      - rescuetime
+      - slack
+      - spectacle
       - steam
       - superduper
       - the-unarchiver
