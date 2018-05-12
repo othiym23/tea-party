@@ -14,7 +14,9 @@
       -
     homebrew_taps:
       - homebrew/services
+      - buo/cask-upgrade
       - caskroom/fonts
+      - d12frosted/emacs-plus
     homebrew_formula:
       - zsh
       - zsh-completions
@@ -32,7 +34,6 @@
       - cscope
       - ctags
       - curl
-      - diffpdf
       - dnstracer
       - docker
       - docker-clean
@@ -43,14 +44,12 @@
       - emacs-plus
       - exa
       - findutils
-      - fsharppowerpack
       - ghc
       - gist
       - git
       - git-extras
       - git-flow
       - git-lfs
-      - git-utils
       - gnu-sed
       - gnu-typist
       - go
@@ -72,7 +71,6 @@
       - ocamlbuild
       - octave
       - opam
-      - ounit
       - pandoc
       - par
       - proctools
@@ -101,7 +99,7 @@
       - w3m
       - wget
       - wrk
-      - xar
+      - xar-mackyle
       - xhyve
       - xz
     homebrew_casks:
@@ -111,7 +109,6 @@
       - dash
       - default-folder-x
       - dropbox
-      - fantastical
       - firefox
       - forklift
       - flux
@@ -125,12 +122,15 @@
       - kap
       - keybase
       - launchbar
+      # this might be a bad idea -- required a High Sierra reinstall after installation
+      - little-snitch
       - mactex
       - nimbus
       - nvalt
       - pgadmin4
       - postgres
       - rescuetime
+      - signal
       - slack
       - spectacle
       - steam
